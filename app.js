@@ -40,7 +40,7 @@ app.get('/random-beer', (req, res) => {
     .getRandom()
     .then(random => {
       console.log('RESPONSE', random); // is working
-      res.render('random-beer', { random: random });
+      res.render('random-beer', { random: random[0] });
     })
     .catch(error => console.log(error));
 });
